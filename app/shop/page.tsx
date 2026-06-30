@@ -68,15 +68,6 @@ export default function ShopPage() {
       <Suspense fallback={<ShopFallback />}>
         <ShopContent />
       </Suspense>
-      
-      {/* Проблема: Низкий контраст текста - видимый элемент в футере */}
-      <div className="bg-white py-4 border-t">
-        <Container>
-          <p className="text-center text-sm" style={{ color: '#999999' }}>
-            © 2026 The Green Room. All rights reserved.
-          </p>
-        </Container>
-      </div>
     </>
   );
 }

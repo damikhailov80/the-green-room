@@ -91,6 +91,10 @@ export default function ShopContent() {
             </p>
             <SearchInput />
           </div>
+          {/* Проблема: Низкий контраст текста */}
+          <p className="text-sm mt-2" style={{ color: '#999999' }}>
+            Free shipping on orders over $50
+          </p>
         </div>
 
         {/* Categories Filter */}
