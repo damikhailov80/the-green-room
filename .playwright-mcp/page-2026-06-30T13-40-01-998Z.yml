@@ -1,0 +1,128 @@
+- generic [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - navigation "Main navigation" [ref=f2e4]:
+      - link "The Green Room" [ref=f2e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=f2e6]:
+        - listitem [ref=f2e7]:
+          - link "Shop" [ref=f2e8] [cursor=pointer]:
+            - /url: /shop
+        - listitem [ref=f2e9]:
+          - link "About" [ref=f2e10] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=f2e11]:
+          - link "Contact" [ref=f2e12] [cursor=pointer]:
+            - /url: /contact
+        - listitem [ref=f2e13]:
+          - link "Cart" [ref=f2e14] [cursor=pointer]:
+            - /url: /cart
+  - main [ref=f2e15]:
+    - generic [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - heading "Succulents" [level=1] [ref=f2e318]
+        - generic [ref=f2e63]:
+          - paragraph [ref=f2e64]: 4 products available
+          - generic [ref=f2e66]:
+            - generic [ref=f2e67]: Search plants
+            - searchbox "Search plants" [ref=f2e68]
+            - img [ref=f2e69]
+      - generic [ref=f2e71]:
+        - heading "Categories" [level=2] [ref=f2e72]
+        - generic [ref=f2e73]:
+          - button "All Plants" [ref=f2e74]
+          - button "Indoor Plants" [ref=f2e75]
+          - button "Succulents" [active] [ref=f2e76]
+          - button "Large Plants" [ref=f2e77]
+          - button "Easy Care" [ref=f2e78]
+          - button "Pots" [ref=f2e79]
+      - generic [ref=f2e80]:
+        - article [ref=f2e319]:
+          - link "Aloe Vera Aloe Vera Aloe barbadensis miller Medicinal succulent with soothing gel-filled leaves $24.00 Easy" [ref=f2e320] [cursor=pointer]:
+            - /url: /products/aloe-vera
+            - img "Aloe Vera" [ref=f2e322]
+            - generic [ref=f2e323]:
+              - generic [ref=f2e324]:
+                - heading "Aloe Vera" [level=3] [ref=f2e325]
+                - paragraph [ref=f2e326]: Aloe barbadensis miller
+              - paragraph [ref=f2e327]: Medicinal succulent with soothing gel-filled leaves
+              - generic [ref=f2e328]:
+                - paragraph [ref=f2e329]: $24.00
+                - generic [ref=f2e330]: Easy
+        - article [ref=f2e331]:
+          - link "Jade Plant Jade Plant Crassula ovata Lucky succulent with thick, coin-shaped leaves $26.00 Easy" [ref=f2e332] [cursor=pointer]:
+            - /url: /products/jade-plant
+            - img "Jade Plant" [ref=f2e334]
+            - generic [ref=f2e335]:
+              - generic [ref=f2e336]:
+                - heading "Jade Plant" [level=3] [ref=f2e337]
+                - paragraph [ref=f2e338]: Crassula ovata
+              - paragraph [ref=f2e339]: Lucky succulent with thick, coin-shaped leaves
+              - generic [ref=f2e340]:
+                - paragraph [ref=f2e341]: $26.00
+                - generic [ref=f2e342]: Easy
+        - article [ref=f2e343]:
+          - link "Echeveria Collection Echeveria Collection Echeveria spp. Set of three rosette-forming succulents in varied colors $32.00 Easy" [ref=f2e344] [cursor=pointer]:
+            - /url: /products/echeveria-collection
+            - img "Echeveria Collection" [ref=f2e346]
+            - generic [ref=f2e347]:
+              - generic [ref=f2e348]:
+                - heading "Echeveria Collection" [level=3] [ref=f2e349]
+                - paragraph [ref=f2e350]: Echeveria spp.
+              - paragraph [ref=f2e351]: Set of three rosette-forming succulents in varied colors
+              - generic [ref=f2e352]:
+                - paragraph [ref=f2e353]: $32.00
+                - generic [ref=f2e354]: Easy
+        - article [ref=f2e355]:
+          - link "String of Pearls String of Pearls Senecio rowleyanus Unique trailing succulent with bead-like leaves $30.00 Moderate" [ref=f2e356] [cursor=pointer]:
+            - /url: /products/string-of-pearls
+            - img "String of Pearls" [ref=f2e358]
+            - generic [ref=f2e359]:
+              - generic [ref=f2e360]:
+                - heading "String of Pearls" [level=3] [ref=f2e361]
+                - paragraph [ref=f2e362]: Senecio rowleyanus
+              - paragraph [ref=f2e363]: Unique trailing succulent with bead-like leaves
+              - generic [ref=f2e364]:
+                - paragraph [ref=f2e365]: $30.00
+                - generic [ref=f2e366]: Moderate
+  - contentinfo [ref=f2e20]:
+    - generic [ref=f2e21]:
+      - generic [ref=f2e22]:
+        - generic [ref=f2e23]:
+          - heading "The Green Room" [level=3] [ref=f2e24]
+          - paragraph [ref=f2e25]: Bringing nature indoors, one plant at a time.
+        - generic [ref=f2e26]:
+          - heading "Shop" [level=4] [ref=f2e27]
+          - list [ref=f2e28]:
+            - listitem [ref=f2e29]:
+              - link "All Plants" [ref=f2e30] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=f2e31]:
+              - link "Indoor Plants" [ref=f2e32] [cursor=pointer]:
+                - /url: /shop?category=indoor-plants
+            - listitem [ref=f2e33]:
+              - link "Succulents" [ref=f2e34] [cursor=pointer]:
+                - /url: /shop?category=succulents
+            - listitem [ref=f2e35]:
+              - link "Pots & Accessories" [ref=f2e36] [cursor=pointer]:
+                - /url: /shop?category=pots
+        - generic [ref=f2e37]:
+          - heading "About" [level=4] [ref=f2e38]
+          - list [ref=f2e39]:
+            - listitem [ref=f2e40]:
+              - link "Our Story" [ref=f2e41] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f2e42]:
+              - link "Contact Us" [ref=f2e43] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=f2e44]:
+          - heading "Stay Connected" [level=4] [ref=f2e45]
+          - paragraph [ref=f2e46]: Subscribe to our newsletter for plant care tips and special offers.
+          - generic [ref=f2e47]:
+            - generic [ref=f2e48]: Email address
+            - textbox "Email for newsletter" [ref=f2e49]:
+              - /placeholder: Your email
+            - button "Subscribe" [ref=f2e50]
+      - paragraph [ref=f2e52]: © 2026 The Green Room. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=f2e58] [cursor=pointer]:
+    - img [ref=f2e59]
+  - alert [ref=f2e316]

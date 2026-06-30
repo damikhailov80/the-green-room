@@ -1,0 +1,64 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Main navigation" [ref=e4]:
+      - link "The Green Room" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Shop" [ref=e8] [cursor=pointer]:
+            - /url: /shop
+        - listitem [ref=e9]:
+          - link "About" [ref=e10] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e11]:
+          - link "Contact" [ref=e12] [cursor=pointer]:
+            - /url: /contact
+        - listitem [ref=e13]:
+          - link "Cart with 1 items" [ref=e14] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e15]: Cart
+            - generic [ref=e16]: "1"
+  - main [ref=e17]:
+    - paragraph [ref=e21]: Loading products...
+  - contentinfo [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - heading "The Green Room" [level=3] [ref=e26]
+          - paragraph [ref=e27]: Bringing nature indoors, one plant at a time.
+        - generic [ref=e28]:
+          - heading "Shop" [level=4] [ref=e29]
+          - list [ref=e30]:
+            - listitem [ref=e31]:
+              - link "All Plants" [ref=e32] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=e33]:
+              - link "Indoor Plants" [ref=e34] [cursor=pointer]:
+                - /url: /shop?category=indoor-plants
+            - listitem [ref=e35]:
+              - link "Succulents" [ref=e36] [cursor=pointer]:
+                - /url: /shop?category=succulents
+            - listitem [ref=e37]:
+              - link "Large Plants" [ref=e38] [cursor=pointer]:
+                - /url: /shop?category=large-plants
+        - generic [ref=e39]:
+          - heading "About" [level=4] [ref=e40]
+          - list [ref=e41]:
+            - listitem [ref=e42]:
+              - link "Our Story" [ref=e43] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e44]:
+              - link "Contact Us" [ref=e45] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e46]:
+          - heading "Stay Connected" [level=4] [ref=e47]
+          - paragraph [ref=e48]: Subscribe to our newsletter for plant care tips and special offers.
+          - generic [ref=e49]:
+            - generic [ref=e50]: Email address
+            - textbox "Email for newsletter" [ref=e51]:
+              - /placeholder: Your email
+            - button "Subscribe" [ref=e52]
+      - paragraph [ref=e54]: © 2026 The Green Room. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e60] [cursor=pointer]:
+    - img [ref=e61]
+  - alert [ref=e64]

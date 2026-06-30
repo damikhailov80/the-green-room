@@ -1,0 +1,162 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Main navigation" [ref=e4]:
+      - link "The Green Room" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Shop" [ref=e8] [cursor=pointer]:
+            - /url: /shop
+        - listitem [ref=e9]:
+          - link "About" [ref=e10] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e11]:
+          - link "Contact" [ref=e12] [cursor=pointer]:
+            - /url: /contact
+        - listitem [ref=e13]:
+          - link "Cart with 1 items" [ref=e14] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e15]: Cart
+            - generic [ref=e16]: "1"
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - navigation "Breadcrumb" [ref=e21]:
+        - list [ref=e22]:
+          - listitem [ref=e23]:
+            - link "Home" [ref=e24] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e25]:
+            - generic [ref=e26]: /
+            - link "Shop" [ref=e27] [cursor=pointer]:
+              - /url: /shop
+          - listitem [ref=e28]:
+            - generic [ref=e29]: /
+            - generic [ref=e30]: Aloe Vera
+      - generic [ref=e31]:
+        - img "Aloe Vera" [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - heading "Aloe Vera" [level=1] [ref=e36]
+            - paragraph [ref=e37]: Aloe barbadensis miller
+          - generic [ref=e39]:
+            - 'img "Rating: 4.8 out of 5 stars" [ref=e40]':
+              - img [ref=e41]
+              - img [ref=e43]
+              - img [ref=e45]
+              - img [ref=e47]
+              - img [ref=e49]
+            - generic [ref=e51]: "4.8"
+          - paragraph [ref=e52]: $24.00
+          - paragraph [ref=e53]: Aloe Vera is both beautiful and practical. Its thick, gel-filled leaves can be used to soothe minor burns and skin irritations. This succulent is incredibly easy to care for, requiring infrequent watering and bright light. It's perfect for sunny windowsills and makes a great gift for anyone interested in natural remedies.
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - generic [ref=e56]:
+                - generic [ref=e57]: Quantity
+                - generic [ref=e58]:
+                  - button "Decrease quantity" [disabled] [ref=e59]:
+                    - img [ref=e60]
+                  - generic [ref=e61]: Quantity
+                  - spinbutton "Product quantity" [ref=e62]: "1"
+                  - button "Increase quantity" [ref=e63]:
+                    - img [ref=e64]
+              - button "Add to Cart" [ref=e66]
+            - paragraph [ref=e67]: 22 in stock
+          - generic [ref=e68]:
+            - heading "Plant Care" [level=2] [ref=e69]
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - term [ref=e72]: Height
+                - definition [ref=e73]: 20-30cm
+              - generic [ref=e74]:
+                - term [ref=e75]: Light Requirements
+                - definition [ref=e76]: Bright direct light
+              - generic [ref=e77]:
+                - term [ref=e78]: Watering
+                - definition [ref=e79]: Every 2-3 weeks
+              - generic [ref=e80]:
+                - term [ref=e81]: Difficulty
+                - definition [ref=e82]: Easy
+              - generic [ref=e83]:
+                - term [ref=e84]: Pet Friendly
+                - definition [ref=e85]: No, toxic to pets
+      - generic [ref=e86]:
+        - heading "You Might Also Like" [level=2] [ref=e87]
+        - generic [ref=e88]:
+          - article [ref=e89]:
+            - link "Jade Plant Jade Plant Crassula ovata Lucky succulent with thick, coin-shaped leaves $26.00 Easy" [ref=e90] [cursor=pointer]:
+              - /url: /products/jade-plant
+              - img "Jade Plant" [ref=e92]
+              - generic [ref=e93]:
+                - generic [ref=e94]:
+                  - heading "Jade Plant" [level=3] [ref=e95]
+                  - paragraph [ref=e96]: Crassula ovata
+                - paragraph [ref=e97]: Lucky succulent with thick, coin-shaped leaves
+                - generic [ref=e98]:
+                  - paragraph [ref=e99]: $26.00
+                  - generic [ref=e100]: Easy
+          - article [ref=e101]:
+            - link "Echeveria Collection Echeveria Collection Echeveria spp. Set of three rosette-forming succulents in varied colors $32.00 Easy" [ref=e102] [cursor=pointer]:
+              - /url: /products/echeveria-collection
+              - img "Echeveria Collection" [ref=e104]
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - heading "Echeveria Collection" [level=3] [ref=e107]
+                  - paragraph [ref=e108]: Echeveria spp.
+                - paragraph [ref=e109]: Set of three rosette-forming succulents in varied colors
+                - generic [ref=e110]:
+                  - paragraph [ref=e111]: $32.00
+                  - generic [ref=e112]: Easy
+          - article [ref=e113]:
+            - link "String of Pearls String of Pearls Senecio rowleyanus Unique trailing succulent with bead-like leaves $30.00 Moderate" [ref=e114] [cursor=pointer]:
+              - /url: /products/string-of-pearls
+              - img "String of Pearls" [ref=e116]
+              - generic [ref=e117]:
+                - generic [ref=e118]:
+                  - heading "String of Pearls" [level=3] [ref=e119]
+                  - paragraph [ref=e120]: Senecio rowleyanus
+                - paragraph [ref=e121]: Unique trailing succulent with bead-like leaves
+                - generic [ref=e122]:
+                  - paragraph [ref=e123]: $30.00
+                  - generic [ref=e124]: Moderate
+  - contentinfo [ref=e125]:
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - heading "The Green Room" [level=3] [ref=e129]
+          - paragraph [ref=e130]: Bringing nature indoors, one plant at a time.
+        - generic [ref=e131]:
+          - heading "Shop" [level=4] [ref=e132]
+          - list [ref=e133]:
+            - listitem [ref=e134]:
+              - link "All Plants" [ref=e135] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=e136]:
+              - link "Indoor Plants" [ref=e137] [cursor=pointer]:
+                - /url: /shop?category=indoor-plants
+            - listitem [ref=e138]:
+              - link "Succulents" [ref=e139] [cursor=pointer]:
+                - /url: /shop?category=succulents
+            - listitem [ref=e140]:
+              - link "Large Plants" [ref=e141] [cursor=pointer]:
+                - /url: /shop?category=large-plants
+        - generic [ref=e142]:
+          - heading "About" [level=4] [ref=e143]
+          - list [ref=e144]:
+            - listitem [ref=e145]:
+              - link "Our Story" [ref=e146] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e147]:
+              - link "Contact Us" [ref=e148] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e149]:
+          - heading "Stay Connected" [level=4] [ref=e150]
+          - paragraph [ref=e151]: Subscribe to our newsletter for plant care tips and special offers.
+          - generic [ref=e152]:
+            - generic [ref=e153]: Email address
+            - textbox "Email for newsletter" [ref=e154]:
+              - /placeholder: Your email
+            - button "Subscribe" [ref=e155]
+      - paragraph [ref=e157]: © 2026 The Green Room. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e163] [cursor=pointer]:
+    - img [ref=e164]
+  - alert [ref=e167]

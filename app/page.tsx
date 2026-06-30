@@ -1,65 +1,173 @@
-import Image from "next/image";
+import Link from 'next/link';
+import { Container } from '@/components/Container';
+import { Button } from '@/components/Button';
+import { ProductCard } from '@/components/ProductCard';
+import { getFeaturedProducts } from '@/lib/api/products';
+import { getCategories } from '@/lib/api/categories';
 
-export default function Home() {
+export default async function Home() {
+  const [featuredProducts, categories] = await Promise.all([
+    getFeaturedProducts(4),
+    getCategories(),
+  ]);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      {/* Hero Section */}
+      <section id="hero" className="bg-green-50 py-20">
+        <Container>
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Bring nature into your home
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Discover our curated collection of indoor plants, succulents, and stylish planters. 
+              Each plant is carefully selected to thrive in your space.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button as={Link} href="/shop" size="lg">
+                Shop All Plants
+              </Button>
+              <Button as={Link} href="/about" variant="secondary" size="lg">
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Featured Products */}
+      <section id="featured" className="py-20">
+        <Container>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Customer Favorites
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              These beloved plants have earned top ratings from our community
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredProducts.map(product => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button as={Link} href="/shop" variant="secondary">
+              View All Products
+            </Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Categories */}
+      <section id="categories" className="py-20 bg-gray-50">
+        <Container>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Shop by Category
+            </h2>
+            <p className="text-lg text-gray-600">
+              Find the perfect plants for your lifestyle
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {categories.map(category => (
+              <Link
+                key={category.id}
+                href={`/shop?category=${category.slug}`}
+                className="group bg-white rounded-lg p-8 hover:shadow-lg transition-shadow focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-800 transition-colors">
+                  {category.name}
+                </h3>
+                <p className="text-gray-600">
+                  {category.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Benefits */}
+      <section id="benefits" className="py-20">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Quality Guaranteed
+              </h3>
+              <p className="text-gray-600">
+                Every plant is carefully inspected and ships in perfect condition
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Care Guides
+              </h3>
+              <p className="text-gray-600">
+                Detailed instructions help you keep your plants thriving
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Sustainable Practices
+              </h3>
+              <p className="text-gray-600">
+                Eco-friendly packaging and responsibly sourced plants
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Newsletter */}
+      <section id="newsletter" className="py-20 bg-green-800 text-white">
+        <Container>
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Join Our Plant Community
+            </h2>
+            <p className="text-green-100 mb-8 text-lg">
+              Get plant care tips, exclusive offers, and inspiration delivered to your inbox
+            </p>
+            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <label htmlFor="hero-newsletter-email" className="sr-only">Email address</label>
+              <input
+                id="hero-newsletter-email"
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-6 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-800"
+                required
+              />
+              <Button type="submit" variant="secondary">
+                Subscribe
+              </Button>
+            </form>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }

@@ -1,0 +1,310 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Main navigation" [ref=e4]:
+      - link "The Green Room" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Shop" [ref=e8] [cursor=pointer]:
+            - /url: /shop
+        - listitem [ref=e9]:
+          - link "About" [ref=e10] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e11]:
+          - link "Contact" [ref=e12] [cursor=pointer]:
+            - /url: /contact
+        - listitem [ref=e13]:
+          - link "Cart" [ref=e14] [cursor=pointer]:
+            - /url: /cart
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - heading "All Plants" [level=1] [ref=e62]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: 20 products available
+          - generic [ref=e66]:
+            - generic [ref=e67]: Search plants
+            - searchbox "Search plants" [ref=e68]
+            - img [ref=e69]
+      - generic [ref=e71]:
+        - heading "Categories" [level=2] [ref=e72]
+        - generic [ref=e73]:
+          - button "All Plants" [ref=e74]
+          - button "Indoor Plants" [ref=e75]
+          - button "Succulents" [ref=e76]
+          - button "Large Plants" [ref=e77]
+          - button "Easy Care" [ref=e78]
+          - button "Pots" [ref=e79]
+      - generic [ref=e80]:
+        - article [ref=e81]:
+          - link "Monstera Deliciosa Monstera Deliciosa Monstera deliciosa Iconic split-leaf plant that brings tropical vibes to any space $45.00 Easy" [ref=e82] [cursor=pointer]:
+            - /url: /products/monstera-deliciosa
+            - img "Monstera Deliciosa" [ref=e84]
+            - generic [ref=e85]:
+              - generic [ref=e86]:
+                - heading "Monstera Deliciosa" [level=3] [ref=e87]
+                - paragraph [ref=e88]: Monstera deliciosa
+              - paragraph [ref=e89]: Iconic split-leaf plant that brings tropical vibes to any space
+              - generic [ref=e90]:
+                - paragraph [ref=e91]: $45.00
+                - generic [ref=e92]: Easy
+        - article [ref=e93]:
+          - link "Snake Plant Snake Plant Sansevieria trifasciata Nearly indestructible air-purifying plant perfect for beginners $32.00 Easy" [ref=e94] [cursor=pointer]:
+            - /url: /products/snake-plant
+            - img "Snake Plant" [ref=e96]
+            - generic [ref=e97]:
+              - generic [ref=e98]:
+                - heading "Snake Plant" [level=3] [ref=e99]
+                - paragraph [ref=e100]: Sansevieria trifasciata
+              - paragraph [ref=e101]: Nearly indestructible air-purifying plant perfect for beginners
+              - generic [ref=e102]:
+                - paragraph [ref=e103]: $32.00
+                - generic [ref=e104]: Easy
+        - article [ref=e105]:
+          - link "Peace Lily Peace Lily Spathiphyllum wallisii Elegant flowering plant that thrives in low light $38.00 Easy" [ref=e106] [cursor=pointer]:
+            - /url: /products/peace-lily
+            - img "Peace Lily" [ref=e108]
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - heading "Peace Lily" [level=3] [ref=e111]
+                - paragraph [ref=e112]: Spathiphyllum wallisii
+              - paragraph [ref=e113]: Elegant flowering plant that thrives in low light
+              - generic [ref=e114]:
+                - paragraph [ref=e115]: $38.00
+                - generic [ref=e116]: Easy
+        - article [ref=e117]:
+          - link "Rubber Plant Rubber Plant Ficus elastica Bold statement plant with glossy burgundy leaves $52.00 Easy" [ref=e118] [cursor=pointer]:
+            - /url: /products/rubber-plant
+            - img "Rubber Plant" [ref=e120]
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - heading "Rubber Plant" [level=3] [ref=e123]
+                - paragraph [ref=e124]: Ficus elastica
+              - paragraph [ref=e125]: Bold statement plant with glossy burgundy leaves
+              - generic [ref=e126]:
+                - paragraph [ref=e127]: $52.00
+                - generic [ref=e128]: Easy
+        - article [ref=e129]:
+          - link "Fiddle Leaf Fig Fiddle Leaf Fig Ficus lyrata Designer favorite with large violin-shaped leaves $68.00 Moderate" [ref=e130] [cursor=pointer]:
+            - /url: /products/fiddle-leaf-fig
+            - img "Fiddle Leaf Fig" [ref=e132]
+            - generic [ref=e133]:
+              - generic [ref=e134]:
+                - heading "Fiddle Leaf Fig" [level=3] [ref=e135]
+                - paragraph [ref=e136]: Ficus lyrata
+              - paragraph [ref=e137]: Designer favorite with large violin-shaped leaves
+              - generic [ref=e138]:
+                - paragraph [ref=e139]: $68.00
+                - generic [ref=e140]: Moderate
+        - article [ref=e141]:
+          - link "ZZ Plant ZZ Plant Zamioculcas zamiifolia Glossy, drought-tolerant plant that thrives on neglect $35.00 Easy" [ref=e142] [cursor=pointer]:
+            - /url: /products/zz-plant
+            - img "ZZ Plant" [ref=e144]
+            - generic [ref=e145]:
+              - generic [ref=e146]:
+                - heading "ZZ Plant" [level=3] [ref=e147]
+                - paragraph [ref=e148]: Zamioculcas zamiifolia
+              - paragraph [ref=e149]: Glossy, drought-tolerant plant that thrives on neglect
+              - generic [ref=e150]:
+                - paragraph [ref=e151]: $35.00
+                - generic [ref=e152]: Easy
+        - article [ref=e153]:
+          - link "Pothos Marble Queen Pothos Marble Queen Epipremnum aureum Trailing beauty with white and green variegated leaves $28.00 Easy" [ref=e154] [cursor=pointer]:
+            - /url: /products/pothos-marble-queen
+            - img "Pothos Marble Queen" [ref=e156]
+            - generic [ref=e157]:
+              - generic [ref=e158]:
+                - heading "Pothos Marble Queen" [level=3] [ref=e159]
+                - paragraph [ref=e160]: Epipremnum aureum
+              - paragraph [ref=e161]: Trailing beauty with white and green variegated leaves
+              - generic [ref=e162]:
+                - paragraph [ref=e163]: $28.00
+                - generic [ref=e164]: Easy
+        - article [ref=e165]:
+          - link "Bird of Paradise Bird of Paradise Strelitzia reginae Dramatic tropical plant with large paddle-shaped leaves $85.00 Moderate" [ref=e166] [cursor=pointer]:
+            - /url: /products/bird-of-paradise
+            - img "Bird of Paradise" [ref=e168]
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - heading "Bird of Paradise" [level=3] [ref=e171]
+                - paragraph [ref=e172]: Strelitzia reginae
+              - paragraph [ref=e173]: Dramatic tropical plant with large paddle-shaped leaves
+              - generic [ref=e174]:
+                - paragraph [ref=e175]: $85.00
+                - generic [ref=e176]: Moderate
+        - article [ref=e177]:
+          - link "Calathea Orbifolia Calathea Orbifolia Calathea orbifolia Stunning prayer plant with silver striped leaves $42.00 Moderate" [ref=e178] [cursor=pointer]:
+            - /url: /products/calathea-orbifolia
+            - img "Calathea Orbifolia" [ref=e180]
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - heading "Calathea Orbifolia" [level=3] [ref=e183]
+                - paragraph [ref=e184]: Calathea orbifolia
+              - paragraph [ref=e185]: Stunning prayer plant with silver striped leaves
+              - generic [ref=e186]:
+                - paragraph [ref=e187]: $42.00
+                - generic [ref=e188]: Moderate
+        - article [ref=e189]:
+          - link "Chinese Evergreen Chinese Evergreen Aglaonema Colorful, low-light tolerant plant with patterned leaves $36.00 Easy" [ref=e190] [cursor=pointer]:
+            - /url: /products/chinese-evergreen
+            - img "Chinese Evergreen" [ref=e192]
+            - generic [ref=e193]:
+              - generic [ref=e194]:
+                - heading "Chinese Evergreen" [level=3] [ref=e195]
+                - paragraph [ref=e196]: Aglaonema
+              - paragraph [ref=e197]: Colorful, low-light tolerant plant with patterned leaves
+              - generic [ref=e198]:
+                - paragraph [ref=e199]: $36.00
+                - generic [ref=e200]: Easy
+        - article [ref=e201]:
+          - link "Philodendron Birkin Philodendron Birkin Philodendron birkin Compact plant with striking white pinstripes $48.00 Easy" [ref=e202] [cursor=pointer]:
+            - /url: /products/philodendron-birkin
+            - img "Philodendron Birkin" [ref=e204]
+            - generic [ref=e205]:
+              - generic [ref=e206]:
+                - heading "Philodendron Birkin" [level=3] [ref=e207]
+                - paragraph [ref=e208]: Philodendron birkin
+              - paragraph [ref=e209]: Compact plant with striking white pinstripes
+              - generic [ref=e210]:
+                - paragraph [ref=e211]: $48.00
+                - generic [ref=e212]: Easy
+        - article [ref=e213]:
+          - link "Aloe Vera Aloe Vera Aloe barbadensis miller Medicinal succulent with soothing gel-filled leaves $24.00 Easy" [ref=e214] [cursor=pointer]:
+            - /url: /products/aloe-vera
+            - img "Aloe Vera" [ref=e216]
+            - generic [ref=e217]:
+              - generic [ref=e218]:
+                - heading "Aloe Vera" [level=3] [ref=e219]
+                - paragraph [ref=e220]: Aloe barbadensis miller
+              - paragraph [ref=e221]: Medicinal succulent with soothing gel-filled leaves
+              - generic [ref=e222]:
+                - paragraph [ref=e223]: $24.00
+                - generic [ref=e224]: Easy
+        - article [ref=e225]:
+          - link "Jade Plant Jade Plant Crassula ovata Lucky succulent with thick, coin-shaped leaves $26.00 Easy" [ref=e226] [cursor=pointer]:
+            - /url: /products/jade-plant
+            - img "Jade Plant" [ref=e228]
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - heading "Jade Plant" [level=3] [ref=e231]
+                - paragraph [ref=e232]: Crassula ovata
+              - paragraph [ref=e233]: Lucky succulent with thick, coin-shaped leaves
+              - generic [ref=e234]:
+                - paragraph [ref=e235]: $26.00
+                - generic [ref=e236]: Easy
+        - article [ref=e237]:
+          - link "Echeveria Collection Echeveria Collection Echeveria spp. Set of three rosette-forming succulents in varied colors $32.00 Easy" [ref=e238] [cursor=pointer]:
+            - /url: /products/echeveria-collection
+            - img "Echeveria Collection" [ref=e240]
+            - generic [ref=e241]:
+              - generic [ref=e242]:
+                - heading "Echeveria Collection" [level=3] [ref=e243]
+                - paragraph [ref=e244]: Echeveria spp.
+              - paragraph [ref=e245]: Set of three rosette-forming succulents in varied colors
+              - generic [ref=e246]:
+                - paragraph [ref=e247]: $32.00
+                - generic [ref=e248]: Easy
+        - article [ref=e249]:
+          - link "String of Pearls String of Pearls Senecio rowleyanus Unique trailing succulent with bead-like leaves $30.00 Moderate" [ref=e250] [cursor=pointer]:
+            - /url: /products/string-of-pearls
+            - img "String of Pearls" [ref=e252]
+            - generic [ref=e253]:
+              - generic [ref=e254]:
+                - heading "String of Pearls" [level=3] [ref=e255]
+                - paragraph [ref=e256]: Senecio rowleyanus
+              - paragraph [ref=e257]: Unique trailing succulent with bead-like leaves
+              - generic [ref=e258]:
+                - paragraph [ref=e259]: $30.00
+                - generic [ref=e260]: Moderate
+        - article [ref=e261]:
+          - link "Ceramic Pot White Ceramic Pot White Minimalist white ceramic planter with drainage hole $22.00 Easy" [ref=e262] [cursor=pointer]:
+            - /url: /products/ceramic-pot-white
+            - img "Ceramic Pot White" [ref=e264]
+            - generic [ref=e265]:
+              - heading "Ceramic Pot White" [level=3] [ref=e267]
+              - paragraph [ref=e268]: Minimalist white ceramic planter with drainage hole
+              - generic [ref=e269]:
+                - paragraph [ref=e270]: $22.00
+                - generic [ref=e271]: Easy
+        - article [ref=e272]:
+          - link "Ceramic Pot Sage Ceramic Pot Sage Soft sage green ceramic planter with modern design $24.00 Easy" [ref=e273] [cursor=pointer]:
+            - /url: /products/ceramic-pot-sage
+            - img "Ceramic Pot Sage" [ref=e275]
+            - generic [ref=e276]:
+              - heading "Ceramic Pot Sage" [level=3] [ref=e278]
+              - paragraph [ref=e279]: Soft sage green ceramic planter with modern design
+              - generic [ref=e280]:
+                - paragraph [ref=e281]: $24.00
+                - generic [ref=e282]: Easy
+        - article [ref=e283]:
+          - link "Hanging Macrame Hanging Macrame Handwoven macrame plant hanger for trailing plants $18.00 Easy" [ref=e284] [cursor=pointer]:
+            - /url: /products/hanging-macrame
+            - img "Hanging Macrame" [ref=e286]
+            - generic [ref=e287]:
+              - heading "Hanging Macrame" [level=3] [ref=e289]
+              - paragraph [ref=e290]: Handwoven macrame plant hanger for trailing plants
+              - generic [ref=e291]:
+                - paragraph [ref=e292]: $18.00
+                - generic [ref=e293]: Easy
+        - article [ref=e294]:
+          - link "Terracotta Pot Set Terracotta Pot Set Set of three classic terracotta pots with saucers $28.00 Easy" [ref=e295] [cursor=pointer]:
+            - /url: /products/terracotta-set
+            - img "Terracotta Pot Set" [ref=e297]
+            - generic [ref=e298]:
+              - heading "Terracotta Pot Set" [level=3] [ref=e300]
+              - paragraph [ref=e301]: Set of three classic terracotta pots with saucers
+              - generic [ref=e302]:
+                - paragraph [ref=e303]: $28.00
+                - generic [ref=e304]: Easy
+        - article [ref=e305]:
+          - link "Modern Plant Stand Black Modern Plant Stand Black Sleek black metal plant stand with mid-century design $38.00 Easy" [ref=e306] [cursor=pointer]:
+            - /url: /products/modern-stand-black
+            - img "Modern Plant Stand Black" [ref=e308]
+            - generic [ref=e309]:
+              - heading "Modern Plant Stand Black" [level=3] [ref=e311]
+              - paragraph [ref=e312]: Sleek black metal plant stand with mid-century design
+              - generic [ref=e313]:
+                - paragraph [ref=e314]: $38.00
+                - generic [ref=e315]: Easy
+  - contentinfo [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - heading "The Green Room" [level=3] [ref=e24]
+          - paragraph [ref=e25]: Bringing nature indoors, one plant at a time.
+        - generic [ref=e26]:
+          - heading "Shop" [level=4] [ref=e27]
+          - list [ref=e28]:
+            - listitem [ref=e29]:
+              - link "All Plants" [ref=e30] [cursor=pointer]:
+                - /url: /shop
+            - listitem [ref=e31]:
+              - link "Indoor Plants" [ref=e32] [cursor=pointer]:
+                - /url: /shop?category=indoor-plants
+            - listitem [ref=e33]:
+              - link "Succulents" [ref=e34] [cursor=pointer]:
+                - /url: /shop?category=succulents
+            - listitem [ref=e35]:
+              - link "Pots & Accessories" [ref=e36] [cursor=pointer]:
+                - /url: /shop?category=pots
+        - generic [ref=e37]:
+          - heading "About" [level=4] [ref=e38]
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - link "Our Story" [ref=e41] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e42]:
+              - link "Contact Us" [ref=e43] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e44]:
+          - heading "Stay Connected" [level=4] [ref=e45]
+          - paragraph [ref=e46]: Subscribe to our newsletter for plant care tips and special offers.
+          - generic [ref=e47]:
+            - generic [ref=e48]: Email address
+            - textbox "Email for newsletter" [ref=e49]:
+              - /placeholder: Your email
+            - button "Subscribe" [ref=e50]
+      - paragraph [ref=e52]: © 2026 The Green Room. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e58] [cursor=pointer]:
+    - img [ref=e59]
+  - alert [ref=e316]
