@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import Script from 'next/script';
 import { Container } from '@/components/Container';
 import ShopContent from '@/components/ShopContent';
 
@@ -14,9 +15,23 @@ function ShopFallback() {
   );
 }
 
-export default function ShopPage() {
+export default async function ShopPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const params = await searchParams;
+  const shouldLoadA11yFix = params['a11y-fix'] === 'true';
+
   return (
     <>
+      {shouldLoadA11yFix && (
+        <Script
+          src="/scripts/a11y-fixes/the-green-room-two.vercel.app-shop.js"
+          strategy="afterInteractive"
+        />
+      )}
+      
       {/* Скрытые элементы с accessibility проблемами - не влияют на внешний вид */}
       <div className="sr-only">
         {/* Проблема: Изображение без alt */}
