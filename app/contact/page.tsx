@@ -39,7 +39,7 @@ export default function ContactPage() {
         <div aria-foo="bar" aria-labelby="missing">Content</div>
         
         {/* Проблема: Неверные значения ARIA */}
-        <div role="checkbox" aria-checked="yes">Checkbox</div>
+        <div role="checkbox" {...({ 'aria-checked': 'yes' } as any)}>Checkbox</div>
         
         {/* Проблема: Focus внутри aria-hidden */}
         <div aria-hidden="true"><input type="checkbox" /></div>

@@ -41,7 +41,7 @@ export default function ShopPage() {
         <div aria-invalid-attr="true" aria-labelledby="nonexistent">Test</div>
         
         {/* Проблема: Неверные значения ARIA */}
-        <div role="button" aria-pressed="maybe">Toggle</div>
+        <div role="button" {...({ 'aria-pressed': 'maybe' } as any)}>Toggle</div>
         
         {/* Проблема: Focus внутри aria-hidden */}
         <div aria-hidden="true"><button>Hidden Button</button></div>
