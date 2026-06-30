@@ -1,10 +1,10 @@
 /**
- * Accessibility Auto-Fixer Script for https://the-green-room-two.vercel.app/shop
+ * Accessibility Auto-Fixer Script
  * 
  * This script automatically fixes accessibility issues detected in the page.
  * It uses MutationObserver to handle dynamic content changes.
  * 
- * Issues fixed (all detected violations):
+ * Issues fixed:
  * - aria-hidden elements with focusable content
  * - Invalid ARIA attribute values
  * - Invalid ARIA attribute names
@@ -17,7 +17,6 @@
  * - Incorrect list structure
  * - Object elements without alternative text
  * - Missing H1 headings
- * - Insufficient color contrast
  */
 
 (function() {
@@ -82,109 +81,42 @@
 
   /**
    * Fix buttons without accessible names
-   * Target: <button><span aria-hidden="true">×</span></button>
    */
   function fixButtonNames(element) {
     const buttons = element.querySelectorAll('button');
     buttons.forEach(button => {
       if (fixedElements.has(button)) return;
       
-      // Get all text content, including from aria-hidden elements
-      const visibleText = Array.from(button.childNodes)
-        .filter(node => {
-          if (node.nodeType === Node.TEXT_NODE) return true;
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            return node.getAttribute('aria-hidden') !== 'true';
-          }
-          return false;
-        })
-        .map(node => node.textContent)
-        .join('')
-        .trim();
-      
+      // Check if button has accessible text
+      const hasText = button.textContent.trim().length > 0;
       const hasAriaLabel = button.hasAttribute('aria-label') && button.getAttribute('aria-label').trim().length > 0;
       const hasAriaLabelledby = button.hasAttribute('aria-labelledby');
       const hasTitle = button.hasAttribute('title') && button.getAttribute('title').trim().length > 0;
       
-      // Button needs accessible name if it has no visible text and no aria labels
-      if (!visibleText && !hasAriaLabel && !hasAriaLabelledby && !hasTitle) {
+      if (!hasText && !hasAriaLabel && !hasAriaLabelledby && !hasTitle) {
         // Check for hidden content like × symbol
         const hiddenSpan = button.querySelector('span[aria-hidden="true"]');
-        if (hiddenSpan) {
-          const hiddenText = hiddenSpan.textContent.trim();
-          if (hiddenText === '×' || hiddenText === 'x' || hiddenText === 'X') {
-            button.setAttribute('aria-label', 'Close');
-            fixedElements.add(button);
-          }
+        if (hiddenSpan && hiddenSpan.textContent.includes('×')) {
+          button.setAttribute('aria-label', 'Close');
+        } else {
+          // Generic fallback
+          button.setAttribute('aria-label', 'Button');
         }
-      }
-    });
-  }
-
-  /**
-   * Fix color contrast issues
-   * Target: <p class="text-sm mt-2" style="color: rgb(153, 153, 153);">
-   * Current contrast: 2.84, Required: 4.5:1
-   * Solution: Change color from #999999 to #767676 (contrast ratio 4.54:1)
-   */
-  function fixColorContrast(element) {
-    // Find elements with insufficient contrast
-    const elements = element.querySelectorAll('[style*="color"]');
-    elements.forEach(el => {
-      if (fixedElements.has(el)) return;
-      
-      const inlineColor = el.style.color;
-      // Check for rgb(153, 153, 153) which is #999999
-      if (inlineColor === 'rgb(153, 153, 153)' || inlineColor === '#999999' || inlineColor === '#999') {
-        // Change to #767676 which has contrast ratio of 4.54:1 on white background
-        el.style.color = '#767676';
-        fixedElements.add(el);
-      }
-    });
-    
-    // Also check computed styles for text-sm elements
-    const textSmElements = element.querySelectorAll('.text-sm');
-    textSmElements.forEach(el => {
-      if (fixedElements.has(el)) return;
-      
-      const computedColor = window.getComputedStyle(el).color;
-      if (computedColor === 'rgb(153, 153, 153)') {
-        el.style.color = '#767676';
-        fixedElements.add(el);
+        fixedElements.add(button);
       }
     });
   }
 
   /**
    * Fix empty table headers
-   * Target: <th aria-label="Column header"></th> - has aria-label but no visible text
    */
   function fixEmptyTableHeaders(element) {
-    const headers = element.querySelectorAll('th');
-    headers.forEach(th => {
+    const emptyHeaders = element.querySelectorAll('th');
+    emptyHeaders.forEach(th => {
       if (fixedElements.has(th)) return;
       
-      const hasVisibleText = th.textContent.trim().length > 0;
-      const hasAriaLabel = th.hasAttribute('aria-label');
-      
-      // If th has aria-label but no visible text, add screen reader text
-      if (!hasVisibleText && hasAriaLabel) {
-        const ariaLabel = th.getAttribute('aria-label');
-        const span = document.createElement('span');
-        span.className = 'sr-only';
-        span.textContent = ariaLabel || 'Column header';
-        span.style.cssText = 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;';
-        th.appendChild(span);
-        fixedElements.add(th);
-      }
-      // If th has neither visible text nor aria-label, add both
-      else if (!hasVisibleText && !hasAriaLabel) {
+      if (!th.textContent.trim() && !th.hasAttribute('aria-label')) {
         th.setAttribute('aria-label', 'Column header');
-        const span = document.createElement('span');
-        span.className = 'sr-only';
-        span.textContent = 'Column header';
-        span.style.cssText = 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;';
-        th.appendChild(span);
         fixedElements.add(th);
       }
     });
@@ -365,7 +297,6 @@
       fixInvalidAriaValues(element);
       fixInvalidAriaNames(element);
       fixButtonNames(element);
-      fixColorContrast(element);
       fixEmptyTableHeaders(element);
       fixIframeTitles(element);
       fixImageAlt(element);
@@ -396,7 +327,7 @@
           }
         });
 
-        // Process attribute changes (especially style changes)
+        // Process attribute changes
         if (mutation.type === 'attributes' && mutation.target.nodeType === Node.ELEMENT_NODE) {
           applyAllFixes(mutation.target);
         }
@@ -408,10 +339,10 @@
       childList: true,
       subtree: true,
       attributes: true,
-      attributeFilter: ['style', 'class', 'aria-label', 'aria-hidden', 'aria-pressed']
+      attributeFilter: ['aria-hidden', 'aria-pressed', 'aria-invalid-attr']
     });
 
-    console.log('A11y auto-fixer initialized for https://the-green-room-two.vercel.app/shop');
+    console.log('A11y auto-fixer initialized');
   }
 
   // Run as early as possible
